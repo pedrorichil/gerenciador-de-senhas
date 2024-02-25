@@ -25,9 +25,10 @@ Este é um simples gerenciador de senhas em Python que criptografa e armazena se
    pip install cryptography
 
    
+
 ## Como usar
 
-1. Execute o arquivo `password_manager.py` para iniciar o gerenciador de senhas.
+1. Execute o arquivo `main.py` para iniciar o gerenciador de senhas.
 
 2. O gerenciador de senhas irá solicitar que você insira informações sobre o serviço, como nome de usuário e senha.
 
@@ -39,11 +40,9 @@ Este é um simples gerenciador de senhas em Python que criptografa e armazena se
 
 ```python
 pm = PasswordManager()
-pm.save_password("example_service", "example_user", "example_password")
-username, password = pm.get_password("example_service")
-if username and password:
-    print(f"Username: {username}, Password: {password}")
+pm.save_password("exemplo_servico", "exemplo_usuario", "exemplo_senha")
+usuario, senha = pm.get_password("exemplo_servico")
+if usuario and senha:
+    print(f"Usuário: {usuario}, Senha: {senha}")
 else:
-    print("Service not found or password not set.")
-
-
+    print("Serviço não encontrado ou senha não definida.")
